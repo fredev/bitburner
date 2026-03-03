@@ -2,6 +2,7 @@ import { NS, Server } from "@ns"
 
 interface ServerExtended extends Server {
   serverSecurityLevel: number
+  serverMinSecurityLevel: number
 }
 
 interface ServersTableProps {
@@ -24,6 +25,7 @@ export function ServersTable({ servers, ns }: ServersTableProps) {
         <th style={styles.cell}>MoneyAvailable</th>
         <th style={styles.cell}>MoneyMax</th>
         <th style={styles.cell}>ServerSecurityLevel</th>
+        <th style={styles.cell}>ServerMinSecurityLevel</th>
       </tr>
 
       {servers.map(server => (
@@ -32,6 +34,7 @@ export function ServersTable({ servers, ns }: ServersTableProps) {
           <td style={styles.cell}>{ns.formatNumber(server?.moneyAvailable ?? 0)}</td>
           <td style={styles.cell}>{ns.formatNumber(server?.moneyMax ?? 0)}</td>
           <td style={styles.cell}>{server.serverSecurityLevel}</td>
+          <td style={styles.cell}>{server.serverMinSecurityLevel}</td>
         </tr>
       ))}
     </table>
