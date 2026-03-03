@@ -16,6 +16,7 @@
     "baseUrl": "src/",
     "allowJs": true,
     "jsx": "react",
+    "allowUmdGlobalAccess": true,
     "paths": {
       "/*": ["*"],
       "@ns": ["../NetscriptDefinitions.d.ts"],
