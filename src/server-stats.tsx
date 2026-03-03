@@ -4,6 +4,9 @@ import { Button } from './components/Button';
 import { GROW } from './constants';
 
 export async function main(ns: NS) {
+  const res = await fetch('https://dogapi.dog/api/v2/facts?limit=1')
+  ns.tprint(await res.json())
+
   ns.ui.openTail();
 
   ns.print(ns.getPurchasedServers());
@@ -41,8 +44,8 @@ export async function main(ns: NS) {
     ns.printRaw(<h1>Hosts</h1>);
     ns.printRaw(<ServersTable servers={servers} ns={ns} />);
 
-    ns.printRaw(<h3>getGrowTime: {ns.getGrowTime(servers[0].hostname)}</h3>);
-    ns.printRaw(<h3>getServerGrowth {ns.getServerGrowth(servers[0].hostname)}</h3>);
+    // ns.printRaw(<h3>getGrowTime: {ns.getGrowTime(servers[0].hostname)}</h3>);
+    // ns.printRaw(<h3>getServerGrowth {ns.getServerGrowth(servers[0].hostname)}</h3>);
 
     await ns.asleep(1000);
     ns.clearLog();
