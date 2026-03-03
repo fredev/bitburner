@@ -35,8 +35,8 @@ export async function main(ns: NS) {
     ns.ls(n, SCRIPTS_FOLDER).forEach((item) => ns.rm(item, n));
     ns.scp(ns.ls('home', SCRIPTS_FOLDER), n);
     ns.exec(WEAKEN, n, 2, noodles);
-    ns.exec(GROW, n, 7, noodles);
-    ns.exec(HACK, n, 2, noodles);
+    ns.exec(GROW, n, 8, noodles);
+    ns.exec(HACK, n, 8, noodles);
   });
 
   // ns.killall(nodes[1]);

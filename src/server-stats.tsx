@@ -47,7 +47,7 @@ export async function main(ns: NS) {
     // ns.printRaw(<h3>getGrowTime: {ns.getGrowTime(servers[0].hostname)}</h3>);
     // ns.printRaw(<h3>getServerGrowth {ns.getServerGrowth(servers[0].hostname)}</h3>);
 
-    await ns.asleep(1000);
+    await ns.asleep(5000);
     ns.clearLog();
   }
 }
